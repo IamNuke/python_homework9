@@ -8,8 +8,6 @@
 # 8. Выход
 
 import classes
-
-
 def show_menu():
     menu = {
         1: 'Открыть файл',
