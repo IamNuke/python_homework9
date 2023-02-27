@@ -38,21 +38,23 @@ while True:
         case 1:
             my_dict_view.open_directory(path)
             my_dict_edit = classes.PhoneBookEdit(my_dict_view)
+            my_dict_edit.set_data(my_dict_view.get_data())
         case 2:
             my_dict_edit.save_directory()
         case 3:
             my_dict_view.show_directory()
         case 4:
             my_dict_edit.add_directory()
-            my_dict_view.data = my_dict_edit.data
+            my_dict_view.set_data(my_dict_edit.get_data())
         case 5:
             my_dict_edit.change_directory()
-            my_dict_view.data = my_dict_edit.data
+            my_dict_view.set_data(my_dict_edit.get_data())
         case 6:
             my_dict_view.find_directory()
         case 7:
             my_dict_edit.delete_directory()
-            my_dict_view.data = my_dict_edit.data
+            ddd = my_dict_edit.get_data()
+            my_dict_view.set_data(my_dict_edit.get_data())
         case 8:
             if my_dict_view.close_directory():
                 break
