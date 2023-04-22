@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 def show_menu():
     menu = {
         1: 'Открыть файл',
@@ -17,6 +19,26 @@ def show_menu():
     else:
         return 0
 
+class DirectoryView:
+    @abstractmethod
+    def show_contacts(self, data):
+        pass
+    @abstractmethod
+    def search_request(self):
+        pass
+    @abstractmethod
+    def add_request(self):
+        pass
+    @abstractmethod
+    def change_request(self, search_result):
+        pass    
+    @abstractmethod
+    def delete_request(self, search_result):
+        pass
+    @abstractmethod
+    def delete_request(self, search_result):
+        pass
+    
 
 class PhoneBookView:
     # def __init__(self):

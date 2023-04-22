@@ -1,11 +1,11 @@
 import view
 import phonebook
-
+import config
 
 
 
 def start():
-    path = "phone_book.txt"
+    path = config.Config.getPath()
     my_dict_view = view.PhoneBookView()
     my_dict_edit = phonebook.PhoneBookEdit(path)
     while True:

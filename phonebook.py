@@ -1,5 +1,38 @@
 
-class PhoneBookEdit:
+from abc import ABC, abstractmethod
+
+class DirectoryEdit:
+    @abstractmethod
+    def set_data(self, data):
+        pass    
+    @abstractmethod
+    def get_data(self):
+        pass
+    @abstractmethod
+    def open_directory(self):
+        pass
+    @abstractmethod
+    def save_directory(self):
+        pass
+    @abstractmethod
+    def add_directory(self, add_request):
+        pass
+    @abstractmethod
+    def change_directory(self, current_data, new_data):
+        pass
+    @abstractmethod
+    def delete_from_directory(self, delete_request):
+        pass
+    @abstractmethod
+    def find_directory(self, request):
+        pass
+    @abstractmethod
+    def close_directory(self):
+        pass
+
+
+
+class PhoneBookEdit(DirectoryEdit):
     def __init__(self, path):
         self._is_open = False
         self._path = path
