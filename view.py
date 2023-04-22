@@ -40,7 +40,7 @@ class DirectoryView:
         pass
     
 
-class PhoneBookView:
+class PhoneBookView(DirectoryView):
     # def __init__(self):
 
     def show_contacts(self, data):
